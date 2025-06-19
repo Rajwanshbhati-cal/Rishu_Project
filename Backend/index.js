@@ -20,6 +20,15 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 });
 
+
+app.get("/exit", (req, res) => {
+  res.send("Shutting down server...");
+ 
+    console.log("Server closed");
+    process.exit(0);
+ 
+});
+ 
 app.get("/get-names", async (req, res) => {
   try {
     const users = await userModel.find();
