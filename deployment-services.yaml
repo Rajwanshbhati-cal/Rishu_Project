@@ -85,14 +85,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: my-service
+  name: backend-service
 spec:
-  type: NodePort
   selector:
     app: my-app
   ports:
-    - name: frontend-port
+    - name: backend-port
       protocol: TCP
-      port: 8080         # Service port (external)
-      targetPort: 5173   # Frontend container port
-      nodePort: 30007    # Optional - external NodePort
+      port: 4000
+      targetPort: 4000
+      nodePort: 30008  # Optional, or let Kubernetes assign one
