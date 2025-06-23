@@ -42,7 +42,7 @@ selector:
     app: my-app
 ports:
    - name: frontend-port
-      protocol: TCP
-      port: 8080         
-      targetPort: 5173  
-      nodePort: 30007 
+protocol: TCP
+port: 8080         
+targetPort: 5173  
+nodePort: 30007 
