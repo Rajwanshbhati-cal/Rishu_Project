@@ -1,3 +1,36 @@
+# version: '3.8'
+
+# services:
+#   mongo:
+#     image: mongo:4.4.18
+#     ports:
+#       - "27017:27017"
+#     volumes:
+#       - mongo-data:/data/db
+
+#   backend:
+#    image: rajwanshbhati/thirdrepo:backend_03
+#   build:
+#       context: .
+#       dockerfile: Dockerfile.Backend
+#   ports:
+#       - "4000:4000"
+#     # ❗ No volume in production build
+#   depends_on:
+#       - mongo
+
+#   frontend:
+#   image: rajwanshbhati/thirdrepo:frontend_03
+#   build:
+#       context: .
+#       dockerfile: Dockerfile.Frontend
+#   ports:
+#       - "5173:5173"
+#   depends_on:
+#       - backend
+
+# volumes:
+#   mongo-data:
 version: '3.8'
 
 services:
@@ -9,24 +42,23 @@ services:
       - mongo-data:/data/db
 
   backend:
-   image: rajwanshbhati/thirdrepo:backend_03
-  build:
+    image: rajwanshbhati/thirdrepo:backend_03
+    build:
       context: .
       dockerfile: Dockerfile.Backend
-  ports:
+    ports:
       - "4000:4000"
-    # ❗ No volume in production build
-  depends_on:
+    depends_on:
       - mongo
 
   frontend:
-  image: rajwanshbhati/thirdrepo:frontend_03
-  build:
+    image: rajwanshbhati/thirdrepo:frontend_03
+    build:
       context: .
       dockerfile: Dockerfile.Frontend
-  ports:
+    ports:
       - "5173:5173"
-  depends_on:
+    depends_on:
       - backend
 
 volumes:
