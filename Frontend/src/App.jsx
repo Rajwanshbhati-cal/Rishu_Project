@@ -11,7 +11,7 @@ function App() {
 
   async function getData() {
     try {
-      const res = await axios.get("/api/get-names"); // ✅ uses Vite proxy
+      const res = await axios.get("/get-names"); // ✅ uses Vite proxy
       setMessage(res.data);
     } catch (err) {
       console.error("Error fetching data:", err);
@@ -22,7 +22,7 @@ function App() {
     if (text === "") return;
 
     try {
-      await axios.post("/api/add-names", { name: text }); // ✅ uses Vite proxy
+      await axios.post("/add-names", { name: text }); // ✅ uses Vite proxy
       setText("");
       getData();
     } catch (err) {
