@@ -38,9 +38,9 @@ metadata:
   name: my-service
 spec:
  type: NodePort 
-  selector:
+selector:
     app: my-app
-  ports:
+ports:
     - protocol: TCP
       port: 8080
       targetPort: 5173
