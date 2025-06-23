@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.get("/exit", (req, res) => {
+app.get("/api/exit", (req, res) => {
   res.send("Shutting down server...");
  
     console.log("Server closed");
@@ -29,7 +29,7 @@ app.get("/exit", (req, res) => {
  
 });
  
-app.get("/get-names", async (req, res) => {
+app.get("/api/get-names", async (req, res) => {
   try {
     const users = await userModel.find();
     res.send(users || []);
@@ -39,7 +39,7 @@ app.get("/get-names", async (req, res) => {
   }
 });
 
-app.post("/add-names", async (req, res) => {
+app.post("/api/add-names", async (req, res) => {
   try {
     const { name } = req.body;
 
