@@ -42,7 +42,7 @@ services:
       - mongo-data:/data/db
 
   backend:
-    image: rajwanshbhati/thirdrepo:backend_07
+    image: rajwanshbhati/thirdrepo:backend_08
     build:
       context: .
       dockerfile: Dockerfile.Backend
@@ -52,7 +52,7 @@ services:
       - mongo
 
   frontend:
-    image: rajwanshbhati/thirdrepo:frontend_07
+    image: rajwanshbhati/thirdrepo:frontend_08
     build:
       context: .
       dockerfile: Dockerfile.Frontend
