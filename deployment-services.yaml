@@ -115,4 +115,4 @@ spec:
       protocol: TCP
       port: 5173        # ClusterIP port (inside cluster)
       targetPort: 5173  # Matches frontend container
-      nodePort: 30007   # External NodePort (accessible via browser)
+     
