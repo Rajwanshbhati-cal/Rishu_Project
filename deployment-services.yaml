@@ -17,12 +17,12 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: rajwanshbhati/thirdrepo:frontend_06
+          image: rajwanshbhati/thirdrepo:frontend_07
           ports:
             - containerPort: 5173
 
         - name: backend
-          image: rajwanshbhati/thirdrepo:backend_06
+          image: rajwanshbhati/thirdrepo:backend_07
           ports:
             - containerPort: 4000
 
